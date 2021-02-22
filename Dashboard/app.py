@@ -32,21 +32,25 @@ scl.fit_transform(X,y)
 
 #Logistic Regression
 from sklearn.linear_model import LogisticRegression
+#Create and Train Logistic Regression Model
+
+lr=LogisticRegression()
+lr.fit(X_train,y_train.ravel())
+
 #Random Forest
 from sklearn.ensemble import RandomForestClassifier
+ # Create and Fit Random Forest Model
 
+rfc_r=RandomForestClassifier(n_estimators=500,criterion='entropy',max_features=6,max_depth=10,random_state=42)
+rfc_r.fit(X_train,y_train.ravel())
+   
 @app.route('/')
 @app.route('/index')
 def index():
     return render_template('index.html')
 
-@app.route('/lrmodel', methods=['POST'])
+@app.route('/lrmodel', methods=['GET','POST'])
 def lrmodel():
-
-    #Create and Train Logistic Regression Model
-
-    lr=LogisticRegression()
-    lr.fit(X_train,y_train.ravel())
 
     if not request.json:
         abort(400)
@@ -63,13 +67,8 @@ def lrmodel():
     return jsonify({'result': result}), 200 # return success
 
 @app.route('/rfmodel', methods=['POST'])
-def rdmodel():
+def rfmodel():
 
-    # Create and Fit Random Forest Model
-
-    rfc_r=RandomForestClassifier(n_estimators=500,criterion='entropy',max_features=6,max_depth=10,random_state=42)
-    rfc_r.fit(X_train,y_train.ravel())
-   
     if not request.json:
         abort(400)
     input = {
@@ -85,4 +84,5 @@ def rdmodel():
     return jsonify({'result': result}), 200 # return success
 
     if __name__ == "__main__":
-        app.run(debug=True)
+        app.debug=True
+        app.run()

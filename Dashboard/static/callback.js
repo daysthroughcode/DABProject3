@@ -1,4 +1,4 @@
-d3.json('https://jsonplaceholder.typicode.com/posts', {
+d3.json('Dashboard\templates\index.html', {
       method:"POST",
       body: JSON.stringify({
         title: 'Hello',
@@ -11,5 +11,5 @@ d3.json('https://jsonplaceholder.typicode.com/posts', {
       }
     })
     .then(json => {
-     // do something with the response --> put the response into your page
+      window.alert(5 + 6);
     });
