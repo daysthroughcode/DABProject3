@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../static/style/styles.css" />
+    <title>Dashboard Machine Learning Project</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+
+<body id="body">
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav_icon" onclick="toggleSidebar()">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            <div class="navbar__left">
+                <a class="active_link" href="/index">Home</a>
+                <a href="/rfmodel">Random Forest</a>
+                <a href="/lrmodel">Logistic Regression</a>
+
+            </div>
+                   </nav>
+
+        <main>
+            <div class="main__container">
+                <!-- MAIN TITLE STARTS HERE -->
+
+                <div class="main__title">
+                    <!-- <img src="http://placeskull.com/30/30" alt="" /> -->
+                    <div class="main__greeting">
+                        <h1>Digital Sommelier</h1>
+                        <p>Welcome to the digital sommelier, please select your model and input your variables</p>
+                    </div>
+                </div>
+
+                <!-- MAIN TITLE ENDS HERE -->
+                           
+            </div>
+        </main>
+     
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="../static/script.js"></script>
+        <script src="static/callback.js"></script>
+</body>
+
+</html>
