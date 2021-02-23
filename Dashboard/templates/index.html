@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>Digital Sommelier</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -40,51 +40,51 @@
     <form action='/predict' method="POST" class="col s12">
       <div class="row">
         <div class="input-field col s4">
-            <label for="volatile_acidity"><b>Volatile Acidity</b></label>
+            <label for="volatile_acidity"><b>Volatile Acidity (0.01 to 2)</b></label>
             <br>
-          <input   id="volatile_acidity" name='volatile_acidity'type="text" class="validate">
+          <input type="number" id="volatile_acidity" name='volatile_acidity' class="validate">
         </div>
 
         <div class="input-field col s4">
 
-          <label for="residual_sugar"><b>Residual Sugar</b></label>
+          <label for="residual_sugar"><b>Residual Sugar (0.1 to 70)</b></label>
             <br>
-          <input id="residual_sugar"  name="residual_sugar" type="text" class="validate">
+          <input type="number" id="residual_sugar"  name="residual_sugar" class="validate">
 
         </div>
 
         <div class="input-field col s4">
-            <label for="chlorides"><b>Chloride Content</b></label>
+            <label for="chlorides"><b>Chloride Content (0.01 to 1)</b></label>
             <br>
-          <input id="chlorides" name="chlorides" type="text" class="validate">
+          <input type="number" id="chlorides" name="chlorides" class="validate">
 
         </div>
 
         <div class="input-field col s4">
-            <label for="relative_density"><b>Relative Density</b></label>
+            <label for="relative_density"><b>Relative Density (0.1 to 1.1)</b></label>
             <br>
-          <input id="relative_density" name="density" type="text" class="validate">
+          <input type="number" id="relative_density" name="density" class="validate">
 
         </div>
 
         <div class="input-field col s4">
-            <label for="pH"><b>pH</b></label>
+            <label for="pH"><b>pH (0 to 11)</b></label>
             <br>
-          <input id="pH" name="pH" type="text" class="validate">
+          <input type="number" id="pH" name="pH" min="0" max="11" class="validate">
 
         </div>
 
         <div class="input-field col s4">
-            <label for="sulphates"><b>Sulphate Content</b></label>
+            <label for="sulphates"><b>Sulphate Content (0.1 to 3)</b></label>
             <br>
-          <input id="sulphates" name="sulphates" type="text" class="validate">
+          <input type="number" id="sulphates" name="sulphates" class="validate">
 
         </div>
 
         <div class="input-field col s4">
-            <label for="alcohol"><b>Alcohol Content</b></label>
+            <label for="alcohol"><b>Alcohol Content (0 to 20)</b></label>
             <br>
-          <input id="alcohol" name="alcohol" type="text" class="validate">
+          <input type="number" id="alcohol" name="alcohol" class="validate">
 
         </div>
 
@@ -105,7 +105,13 @@
 
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="purple-text text-lighten-3" >Warren Villarosa</a>
+      Project by <a href"https://www.linkedin.com/in/warren-villarosa-12b31636">Warren Villarosa</a>
+      <br>
+        <b>Both Models were created using data from:</b><br>
+        <b><i>P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.</i></b><br>
+        <i>Modeling wine preferences by data mining from physicochemical properties.<br> 
+        In Decision Support Systems, Elsevier, 47(4):547-553, 2009.</i>
+
       </div>
     </div>
   </footer>
