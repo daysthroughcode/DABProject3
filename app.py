@@ -2,6 +2,12 @@ from flask import Flask,request, url_for, redirect, render_template
 import pickle
 import numpy as np
 
+#Logistic Regression
+from sklearn.linear_model import LogisticRegression
+
+#Random Forest
+from sklearn.ensemble import RandomForestClassifier
+
 app = Flask(__name__)
 
 #Import Logistic Regression Model
